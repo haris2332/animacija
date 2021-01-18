@@ -1,0 +1,72 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #050212;
+
+}
+.krug{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    animation: animate 0.5s linear infinite;
+
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{ 
+        transform: rotate(360deg);
+    }
+}
+
+.krug span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+
+}
+
+.krug span:nth-child(1)
+{
+    filter: blur(25px);
+}
+.krug span:nth-child(2)
+{
+    filter: blur(50px);
+}
+.krug span:nth-child(3)
+{
+    filter: blur(70%);
+}
+.krug span:nth-child(4)
+{
+    filter: blur(100%);
+}
+.krug1{
+    position: fixed;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    background-color: #050212;
+    top: 30px;
+    left: 30px; 
+    filter: brightness(0%);
+    animation: krug 1s linear infinite;   
+}
+@keyframes krug{
+    0%{
+        transform: scale(0.2);
+    }
+    100%{
+        transform: scale(0.8);
+    }
